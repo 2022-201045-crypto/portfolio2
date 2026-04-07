@@ -1,24 +1,33 @@
-import { useState } from "react";
+import { type KeyboardEvent, useState } from "react";
 import { motion } from "motion/react";
 import { Bot, MessageSquare, Send, X } from "lucide-react";
 
-const MESSAGES = [
+const INITIAL_MESSAGES = [
   {
     sender: "assistant",
-    text: "Hello! This is your chatbox preview. I can help organize internship notes and workflow plans.",
-  },
-  {
-    sender: "user",
-    text: "Show me the latest internship progress.",
-  },
-  {
-    sender: "assistant",
-    text: "You completed data cleaning workflows in Python and built dashboards for reporting.",
+    text: "Hello! This is your chatbox preview. You can send messages here, but AI responses are not enabled yet.",
   },
 ];
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState(INITIAL_MESSAGES);
+  const [input, setInput] = useState("");
+
+  const sendMessage = () => {
+    const trimmed = input.trim();
+    if (!trimmed) return;
+
+    setMessages((prev) => [...prev, { sender: "user", text: trimmed }]);
+    setInput("");
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sendMessage();
+    }
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
@@ -49,16 +58,20 @@ export function ChatWidget() {
           </div>
 
           <div className="space-y-3 p-4">
-            {MESSAGES.map((message, index) => (
+            {messages.map((message, index) => (
               <div
                 key={index}
-                className={`rounded-3xl p-3 text-sm leading-relaxed ${
-                  message.sender === "assistant"
-                    ? "bg-[#0d0d0d] text-gray-300"
-                    : "bg-[#111111] text-gray-200 self-end"
-                }`}
+                className={`flex ${message.sender === "assistant" ? "justify-start" : "justify-end"}`}
               >
-                <p>{message.text}</p>
+                <div
+                  className={`max-w-[85%] rounded-3xl p-3 text-sm leading-relaxed ${
+                    message.sender === "assistant"
+                      ? "bg-[#0d0d0d] text-gray-300"
+                      : "bg-green-500/15 text-green-200 border border-green-500/30"
+                  }`}
+                >
+                  <p>{message.text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -68,11 +81,17 @@ export function ChatWidget() {
               <MessageSquare size={16} className="text-gray-500" />
               <input
                 type="text"
-                disabled
-                placeholder="Chatbox coming soon..."
-                className="w-full bg-transparent text-sm text-gray-400 placeholder:text-gray-500 outline-none"
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Type a message..."
+                className="w-full bg-transparent text-sm text-gray-200 placeholder:text-gray-500 outline-none"
               />
-              <button disabled className="rounded-full bg-green-400/10 p-2 text-green-400">
+              <button
+                type="button"
+                onClick={sendMessage}
+                className="rounded-full bg-green-400/10 p-2 text-green-400 hover:bg-green-400/20 transition-colors"
+              >
                 <Send size={14} />
               </button>
             </div>
