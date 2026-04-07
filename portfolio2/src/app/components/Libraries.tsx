@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, Download, ChevronRight, ChevronLeft, Facebook, 
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useRef, useState, useEffect, type ReactNode } from "react";
+import myPhoto from "./img/myPhoto.jpg";
 
 /* ── Logo scroll data ── */
 const LOGO_GROUPS = [
@@ -127,7 +128,7 @@ const HIGHLIGHTS = [
   { icon: <BookOpen size={20} className="text-purple-400" />, title: "Data & Libraries", desc: "NumPy, Pandas, Flask & more" },
 ];
 
-export function Hero() {
+export function Libraries() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentPanel, setCurrentPanel] = useState(0);
   const TOTAL_PANELS = 3;
@@ -152,7 +153,7 @@ export function Hero() {
   const strip = buildStrip();
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col bg-[#0a0a0a] relative overflow-hidden pt-16">
+    <section id="libraries" className="min-h-screen flex flex-col bg-[#0a0a0a] relative overflow-hidden pt-16">
       {/* Background grid */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"
@@ -248,7 +249,7 @@ export function Hero() {
                 <div className="absolute -inset-3 rounded-full bg-green-400/10 blur-2xl animate-glow" />
                 <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full border-2 border-green-400/40 overflow-hidden green-glow-border">
                   <ImageWithFallback
-                    src="img/myPhoto.jpg"
+                    src={myPhoto}
                     alt="Gian Carlo Gonzalvo"
                     className="w-full h-full object-cover"
                   />
