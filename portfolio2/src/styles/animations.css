@@ -1,0 +1,96 @@
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #4ade80; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.3), 0 0 20px rgba(74, 222, 128, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.6), 0 0 40px rgba(74, 222, 128, 0.3);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .animate-marquee,
+.marquee-container:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
+
+.animate-glow {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hide scrollbar — hero panel nav only */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Green glow border */
+.green-glow-border {
+  box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.3), 0 0 20px rgba(74, 222, 128, 0.1);
+}
+.green-glow-border:hover {
+  box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.7), 0 0 30px rgba(74, 222, 128, 0.2);
+}
+
+/* Terminal cursor */
+.terminal-cursor::after {
+  content: '|';
+  color: #4ade80;
+  animation: blink 1s step-end infinite;
+}
+
+/* Visible scrollbar for horizontal scroll sections */
+.scroll-area {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #4ade80 #1a1a1a;
+}
+.scroll-area::-webkit-scrollbar {
+  height: 5px;
+}
+.scroll-area::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+.scroll-area::-webkit-scrollbar-thumb {
+  background: #4ade80;
+  border-radius: 10px;
+}
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #86efac;
+}
