@@ -49,10 +49,10 @@ export function Footer() {
             </p>
             <div className="flex gap-2">
               {[
-                { href: "https://github.com/giancarlogonzalvo", Icon: Github },
-                { href: "https://linkedin.com/in/gian-carlo-gonzalvo", Icon: Linkedin },
-                { href: "https://facebook.com", Icon: Facebook },
-                { href: "https://instagram.com/giancarlogonzalvo", Icon: Instagram },
+                { href: "https://github.com/2022-201045-crypto", Icon: Github },
+                { href: "www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5", Icon: Linkedin },
+                { href: "https://www.facebook.com/share/1SnuK2jiKo/", Icon: Facebook },
+                { href: "https://www.instagram.com/giancarlogonzalvo?igsh=MXFja2g3M29wamkwZQ==", Icon: Instagram },
                 { href: "mailto:giangonzalvo@gmail.com", Icon: Mail },
               ].map(({ href, Icon }, i) => (
                 <a
@@ -135,9 +135,6 @@ export function Footer() {
           <p className="text-xs text-gray-600 font-mono flex items-center gap-1.5">
             © {currentYear}
             <span className="text-green-400">Gian Carlo Gonzalvo</span>
-            — Made with
-            <Heart size={11} className="text-red-500 inline" />
-            using React & Tailwind
           </p>
           <div className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
