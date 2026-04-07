@@ -68,20 +68,19 @@ const SKILL_CATEGORIES: {
       {
         name: "ChatGPT",
         years: 3,
-        icon: "https://commons.wikimedia.org/wiki/File:ChatGPT-Logo.svg",
+        icon: "https://cdn.simpleicons.org/openai/ffffff",
         iconBg: "bg-[#10a37f] rounded p-0.5",
       },
       {
         name: "Claude",
         years: 1,
-        icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/claude-ai-icon.png",
+        icon: "https://cdn.simpleicons.org/anthropic/cc785c",
         iconBg: "bg-[#1a1612] rounded p-0.5",
       },
       {
         name: "Gemini",
         years: 1,
-        // Google Gemini icon from simpleicons
-        icon: "https://uxwing.com/google-gemini-icon/",
+        icon: "https://cdn.simpleicons.org/googlegemini/8e75b2",
         iconBg: "bg-[#0f0f1a] rounded p-0.5",
       },
     ],
@@ -128,8 +127,7 @@ const SKILL_CATEGORIES: {
       {
         name: "CapCut",
         years: 1,
-        // CapCut logo via simpleicons (black icon — white bg for visibility)
-        icon: "https://commons.wikimedia.org/wiki/File:Capcut-icon.svg",
+        icon: "https://cdn.simpleicons.org/capcut/000000",
         iconBg: "bg-white rounded p-0.5",
       },
     ],

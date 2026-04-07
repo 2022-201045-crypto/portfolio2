@@ -42,7 +42,7 @@ const TIMELINE = [
   {
     year: "2023",
     title: "Advanced Systems Development",
-    institution: "RTU — Year 3",
+    institution: "RTU — Year 2",
     description: "Built complete systems: POS System (C# + SQL), Attendance System (Python + Raspberry Pi), and started using AI tools & Python libraries.",
     tags: ["Python", "C#", "SQL", "Raspberry Pi", "NumPy", "Pandas"],
     status: "milestone",
@@ -51,7 +51,7 @@ const TIMELINE = [
   {
     year: "2024",
     title: "First Hardware Projects",
-    institution: "RTU — Year 2",
+    institution: "RTU — Year 3",
     description: "Developed initial Arduino mini projects, learned embedded C/C++, and began working with sensors, motors, and microcontrollers.",
     tags: ["Arduino", "C/C++", "Embedded Systems", "Sensors"],
     status: "milestone",
@@ -59,10 +59,19 @@ const TIMELINE = [
   },
   {
     year: "2025",
-    title: "Capstone & Thesis Projects",
+    title: "Final Projects",
     institution: "RTU — Year 4",
     description: "Completed flagship projects: Automatic Pet Feeder with Web Interface,and Automatic Price Computer using Image Recognition, using Raspberry Pi",
     tags: ["Image Recognition", "Flask", "Raspberry Pi", "IoT", "Machine Learning"],
+    status: "milestone",
+    icon: "💡",
+  },
+  {
+    year: "2026",
+    title: "Final Projects",
+    institution: "RTU — Year 4",
+    description: "Aquapalay:An Iot-Enabled Floating Bed System With AI-Driven Decision Support System for Automated Irrigatin, Nutrient Managament and Real-Time Monitoring of RC 216 Palay",
+    tags: ["IoT", "Flask", "Raspberry Pi", "Web development", "Data Visualization"],
     status: "current",
     icon: "💡",
   },
@@ -73,7 +82,13 @@ const TIMELINE = [
     description: "Data Analyst Intern at S.P. Madrid, where I used Python, pandas, and Excel to clean, analyze, and automate data processes, delivering insights to support decision-making.",
     tags: ["Data Analyst","Streamlit", "Python", "Automation"],
     status: "current",
-    icon: "🏆",
+    icon: (
+      <img
+        src="https://framerusercontent.com/images/HJiJzOcNXzZndgXFx20NNG9bZlM.png"
+        alt="S.P. Madrid logo"
+        className="w-6 h-6 object-contain rounded-md"
+      />
+    ),
   },
   {
     year: "2026",

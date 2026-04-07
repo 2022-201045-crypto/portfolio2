@@ -208,7 +208,10 @@ export function Hero() {
                   <Mail size={16} />
                   Get In Touch
                 </a>
-                <button className="px-5 py-2.5 border border-green-400/40 text-green-400 rounded-lg flex items-center gap-2 hover:border-green-400 hover:bg-green-400/10 transition-all duration-200 text-sm">
+                <button
+                  onClick={() => window.open('/workspaces/portfolio2/portfolio2/src/app/components/CV/myCV.pdf', '_blank', 'noopener,noreferrer')}
+                  className="px-5 py-2.5 border border-green-400/40 text-green-400 rounded-lg flex items-center gap-2 hover:border-green-400 hover:bg-green-400/10 transition-all duration-200 text-sm"
+                >
                   <Download size={16} />
                   Download CV
                 </button>
@@ -217,10 +220,10 @@ export function Hero() {
               {/* Socials */}
               <div className="flex gap-2 pt-1">
                 {[
-                  { href: "https://github.com/giancarlogonzalvo", Icon: Github, label: "GitHub" },
-                  { href: "https://linkedin.com/in/gian-carlo-gonzalvo", Icon: Linkedin, label: "LinkedIn" },
-                  { href: "https://facebook.com", Icon: Facebook, label: "Facebook" },
-                  { href: "https://instagram.com/giancarlogonzalvo", Icon: Instagram, label: "Instagram" },
+                  { href: "https://github.com/2022-201045-crypto", Icon: Github, label: "GitHub" },
+                  { href: "https://www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5/", Icon: Linkedin, label: "LinkedIn" },
+                  { href: "https://www.facebook.com/share/1SnuK2jiKo/", Icon: Facebook, label: "Facebook" },
+                  { href: "https://www.instagram.com/giancarlogonzalvo?igsh=MXFja2g3M29wamkwZQ==", Icon: Instagram, label: "Instagram" },
                   { href: "mailto:giangonzalvo@gmail.com", Icon: Mail, label: "Email" },
                 ].map(({ href, Icon, label }) => (
                   <a

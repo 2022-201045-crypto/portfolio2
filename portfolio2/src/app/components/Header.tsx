@@ -72,7 +72,7 @@ export function Header() {
               <Terminal size={14} className="text-green-400" />
             </div>
             <span className="text-white font-mono text-sm group-hover:text-green-400 transition-colors duration-200">
-              <span className="text-green-400">&lt;</span>GCG
+              <span className="text-green-400">&lt;</span>Gian Carlo Gonzalvo
               <span className="text-green-400">/&gt;</span>
             </span>
           </button>

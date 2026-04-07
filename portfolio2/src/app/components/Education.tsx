@@ -107,7 +107,7 @@ export function Education() {
                   <p className="text-green-400 font-medium">Rizal Technological University</p>
                 </div>
                 <span className="px-3 py-1 text-xs font-mono bg-green-900/20 text-green-400 border border-green-500/30 rounded-full">
-                  2022 – 2026
+                  2022 – Present
                 </span>
               </div>
 
@@ -128,20 +128,6 @@ export function Education() {
                 AI-integrated IoT systems.
               </p>
 
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Award size={14} className="text-green-400" />
-                  <h4 className="text-xs font-mono text-green-400 uppercase tracking-widest">Achievements</h4>
-                </div>
-                <div className="grid sm:grid-cols-3 gap-2">
-                  {["Dean's List — All Semesters", "Outstanding Senior Project Award", "Member — IEEE Computer Society"].map((h, i) => (
-                    <div key={i} className="flex items-start gap-2 bg-[#1a1a1a] border border-[#242424] rounded-lg p-2.5 hover:border-green-400/30 transition-colors">
-                      <span className="text-green-500 mt-0.5 text-xs">▸</span>
-                      <span className="text-xs text-gray-400">{h}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
