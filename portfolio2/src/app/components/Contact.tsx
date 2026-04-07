@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
   {
     platform: "LinkedIn",
     handle: "Gian Carlo Gonzalvo",
-    href: "www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5",
+    href: "https://www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5/",
     Icon: Linkedin,
     bg: "bg-[#0a66c2]/20 border border-[#0a66c2]/30",
   },

@@ -50,7 +50,7 @@ export function Footer() {
             <div className="flex gap-2">
               {[
                 { href: "https://github.com/2022-201045-crypto", Icon: Github },
-                { href: "www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5", Icon: Linkedin },
+                { href: "https://www.linkedin.com/in/gonzalvo-gian-carlo-3589043a5/", Icon: Linkedin },
                 { href: "https://www.facebook.com/share/1SnuK2jiKo/", Icon: Facebook },
                 { href: "https://www.instagram.com/giancarlogonzalvo?igsh=MXFja2g3M29wamkwZQ==", Icon: Instagram },
                 { href: "mailto:giangonzalvo@gmail.com", Icon: Mail },
