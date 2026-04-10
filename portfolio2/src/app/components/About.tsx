@@ -68,7 +68,7 @@ const TIMELINE = [
   },
   {
     year: "2026",
-    title: "Final Projects",
+    title: "Thesis Project",
     institution: "RTU — Year 4",
     description: "Aquapalay:An Iot-Enabled Floating Bed System With AI-Driven Decision Support System for Automated Irrigatin, Nutrient Managament and Real-Time Monitoring of RC 216 Palay",
     tags: ["IoT", "Flask", "Raspberry Pi", "Web development", "Data Visualization"],
@@ -77,7 +77,7 @@ const TIMELINE = [
   },
   {
     year: "2026",
-    title: "Internship",
+    title: "Internship - Data Analyst",
     institution: "S.P. Madrid",
     description: "Data Analyst Intern at S.P. Madrid, where I used Python, pandas, and Excel to clean, analyze, and automate data processes, delivering insights to support decision-making.",
     tags: ["Data Analyst","Streamlit", "Python", "Automation"],

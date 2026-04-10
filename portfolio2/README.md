@@ -67,6 +67,8 @@
 4. **Start the development server**:
    ```bash
    npm run dev
+
+   cd /workspaces/portfolio2/portfolio2 && npm run dev
    ```
 
 #### Access Your Portfolio
