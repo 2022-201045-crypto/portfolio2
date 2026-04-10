@@ -84,4 +84,38 @@
 - The project uses Vite for fast development with hot module replacement
 - There's a high-severity vulnerability in dependencies (run `npm audit fix` if you want to address it, but it won't affect development)
 - The portfolio includes components for Hero, About, Skills, Projects, Experience, Education, Contact, etc.
+
+## Deployment
+
+This project is configured for deployment on various platforms. The build output is in the `dist/` directory.
+
+### Supported Platforms
+
+#### Vercel
+- Automatic deployment with `vercel.json` configuration
+- Uses Node.js 18 for compatibility
+
+#### Netlify
+- Automatic deployment with `netlify.toml` configuration
+- Includes SPA fallback for client-side routing
+- Uses Node.js 18 for compatibility
+
+#### Other Platforms
+For other deployment platforms, ensure:
+- Build command: `npm run build`
+- Output directory: `dist`
+- Node.js version: 18 or 20
+
+### Troubleshooting Deployment Issues
+
+If you encounter build failures during deployment:
+
+1. **Node Version**: Ensure the deployment platform uses Node.js 18 or 20 (not 24+)
+2. **Dependencies**: Make sure all dependencies are properly installed
+3. **Build Command**: Verify the platform is running `npm run build`
+4. **Output Directory**: Confirm the platform serves files from the `dist/` directory
+
+### Environment Variables
+
+No environment variables are required for basic functionality. If you add features that need API keys or configuration, add them to your deployment platform's environment settings.
   
