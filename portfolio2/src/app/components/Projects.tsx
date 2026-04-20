@@ -131,6 +131,7 @@ export function Projects() {
         <div
           ref={scrollRef}
           className="flex gap-5 overflow-x-auto scroll-area pb-3 snap-x snap-mandatory"
+          style = {{ paddingTop: "5px" }}
         >
           {PROJECTS.map((project, index) => (
             <motion.div

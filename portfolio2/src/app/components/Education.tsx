@@ -161,6 +161,7 @@ export function Education() {
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto scroll-area pb-3 snap-x snap-mandatory"
+            style={{ paddingTop: "5px" }}
           >
             {CERTIFICATIONS.map((cert, index) => (
               <motion.div
